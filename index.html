@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Word Guessing Game!</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div id="app">
+            <div class="container-fluid bg-light rounded-start rounded-end center p-0" id="container">
+                <div id="start">
+                    <button onclick="startGame()"
+                        class="rounded-start rounded-end text-light center pt-1 pb-1 ps-3 pe-3" id="startBtn">Start
+                        The Game</button>
+                </div>
+
+                <div id="guess" class="hidden">
+                    <h1 id="gameTitle" class="text-center mb-3">Guess the food!</h1>
+
+                    <div id="words" class="d-flex justify-content-center">
+                        <div class="sticky-notes text-center">I</div>
+                        <div class="sticky-notes text-center">O</div>
+                        <div class="sticky-notes text-center">R</div>
+                        <div class="sticky-notes text-center">N</div>
+                        <div class="sticky-notes text-center">A</div>
+                        <div class="sticky-notes text-center">M</div>
+                        <div class="sticky-notes text-center">N</div>
+                    </div>
+
+                    <div class="d-flex justify-content-center">
+                        <input class="mt-3 mb-3" type="text" placeholder="Type your guess word here" id="response">
+                    </div>
+                    <p id="tryagain" class="text-center text-danger" class="hidden">Try again.</p>
+                    <div class="d-flex justify-content-center mb-3">
+                        <button onclick="submit()"
+                            class="rounded-start rounded-end text-light center pt-1 pb-1 ps-3 pe-3"
+                            id="sendBtn">Submit!</button>
+                    </div>
+                </div>
+
+
+                <div id="result" class="hidden">
+                    <H1 class="text-center">That's Right!</H1>
+                    <h5 class="text-center">The answer is <span id="answer">IRONMAN</span></h5>
+                    <div class="d-flex justify-content-center mb-3">
+                        <button onclick="startGame()"
+                            class="rounded-start rounded-end text-light center pt-1 pb-1 ps-3 pe-3" id="replayBtn">Play
+                            again!</button>
+                    </div>
+                </div>
+            </div>
+
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <script src="js/script.js"></script>
+        </div>
+    </body>
+
+</html>
